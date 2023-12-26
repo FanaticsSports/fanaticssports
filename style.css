@@ -1,611 +1,702 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-}
-
-header {
-  background-color: rgb(122, 0, 0);
-  height: 70px;
-  text-align: center;
-  justify-content: center;
-}
-
-header,footer{
-  font-family: informalo11 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-h1 {
-  font-size: 24px;
-  color: grey;
-}
-
-h2 {
-  font-size: 20px;
-  color: #ffffff;
-}
-
-main {
-  background-color: white;
-}
-
-section {
-  width: 95%;
-  padding: 20px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
-}
-
-ul.ranking {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul.ranking li {
-  margin-right: 20px;
-}
-
-.gallery-container {
-  position: relative;
-  width: 1000px;
-  height: 300px;
-  margin: 5px auto;
-  border: 2px solid black;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.gallery {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-  border-radius: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.gallery-container button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  outline: none;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-
-.times {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-  overflow: hidden;
-  position: relative;
-}
-
-.times img {
-  flex-grow: 1;
-  height: 100px;
-  border: 0.5px solid;
-  border-radius: 5%;
-  margin-right: 5px; 
-}
-
-.carousel {
-  width: 80%;
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-30%);
-  font-size: 24px;
-  border-radius: 10px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-footer {
-  display: flex;
-  height: 70px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(122, 0, 0);
-  color: white;
-}
-
-.infor{
-  display: flex;
-  width: 70%;
-  margin-left: 15%;
-  margin-bottom: 3%;
-}
-
-.infor div{
-  width: 33%;
-  display: flex;
-  height: 200px;
-  flex-grow: 1;
-  margin: 20px;
-  border: 3px solid #B20606;
-  border-radius: 25px;
-  background-color: transparent;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
-}
-
-.infor a{
-  width: 101%;
-  height: 101%;
-  border-radius: 25px;
-}
-.infor a img{
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-}
-
-.infor p{
-  margin-top: 5px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-#button_burger{width: 30px; height: 30px; border: none;
-  display: flex;
-  justify-content: center;
-}
-#button_burger img{
-  width: 95%; height: 95%;
-}
-#div_burger{
+  body {
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: rgb(122, 0, 0);
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  header,footer{
+    font-family: informalo11 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: grey;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  main {
+    background-color: white;
+  }
+  
+  section {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  ul.ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul.ranking li {
+    margin-right: 20px;
+  }
+  
+  .gallery-container {
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin: 5px auto;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .gallery {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
-    background-color: white;
-  padding: 10px;}
-#clica_botãoBurger {
-  cursor: pointer;
-  opacity: 0;
-  height: 32px;
-  width: 30px;
-  position: absolute;
-  right:0.6%;
-  top: 11%;
-}
-#clica_botãoBurger:checked ~  .barra_lateral{
-  display: block;
-}
-
-.space_notice{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.notices{
-  margin: 30px;
-  width: 80%;
-  height: 150px;
-  background-color: #D9D9D9;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.images_notice{
-  width: 45%;
-  height: 90%;
-  background-color: #131313;
-  border-radius: 20px;
-  margin: 0 30px;
-}
-.star_notice{
-  align-self: flex-end;
-  width: 5%;
-  height: 18%;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/73/73516.png");
-  
-}
-
-.star_notice img{
-  width: 95%;
-  height: 90%;
-  opacity: 90%;
-}
-
-
-.barra_lateral{
-  top: 0;
-  right: 0;
-  width: 25%;
-  height: 200vh;
-  background-color: black;
-  position: absolute;
-  display: none;
-  
-}
-.barra_lateral button{
-  display: flex;
-  width: 70%;
-  height: 60px;
-  background-color: black;
-  margin: 10% 15%;
-  border: none;
-  border-bottom:1px solid white;
-  color: white;
-  justify-content: center;
-  
-}
-
-.barra_lateral button img{
-  align-self: flex-start;
-  width: 30px;
-  height:30px;
-  top: 2%;
-  right: 85%;
-  background-color: black;
-  position: absolute;
-}
-
-.div_burger{
-  align-self: flex-start;
-  width: 20px; 
-  height: 20px; 
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.div_burger img {
-  width: 100%; 
-  height: 100%; 
-}
-
-.login_page{
-  color: black;
-  width: 100%;
-  height: 700px;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  align-items: center;
-}
-
-.sobre{
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-.sobre_info h6{
-  width: 100%;
-  height: 300px;
-  padding: 10px;
-  font-size: 50px;
-}
-
-.sobrenos{
-  height: 500px;
-  background-color: black;
-}
-
-.login{
-  height: 40%;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30pt;
-  justify-content: center;
-
-}
-
-.login button{
-  width: 300px;
-  background-color: #B20606;
-  height: 55px;
-  border-radius: 15px;
-  border: 2px solid black;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
-}
-
-.login button:hover{
-  background-color: black;
-  color: white;
-}
-
-.conteudo{
-  background-image: url(loginFundo.jpg);
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.loginCaixa{
-  width: 40%;
-  height: 70%;
-  border: 4px groove gray;
-  background-color: black;
-  color: white;
-  border-radius: 15px;
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-}
-.loginCaixa input{
-  margin: 20px 0;
-  width: 90%;
-  height: 40px;
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: white;
-  padding: 5px;
-}
-
-.loginCaixa button{
-  width: 90%;
-  height: 50px;
-  background-color: rgb(122, 0, 0);
-  color: white;
-  border: 2px solid white;
-  border-radius: 15px;
-  align-self: center;
-  margin: 5px 0;
-}
-.loginCaixa button:hover{
-  background-color: black;
-  border: 2px solid white;
-}
-
-button[disabled]{
-  opacity: 0.7;
-}
-
-.conteudo h2{
-  font-size: xx-large;
-  margin: 10px;
-}
-
-.infor1 h1{
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-size: 30px;
-  margin-top: 5px;
-}
-
-
-.text-infor1 {
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-weight: bold;
-  margin: 10px;
-  flex-wrap: wrap;
-}
-
-.text-infor1 table {
-  border: 1px solid lightgray; 
-  margin: 20px; 
-}
-.text-infor1 th{
-  background-color: rgb(122, 0, 0);
-  color: #ffffff;
-}
-
-.text-infor1 th, .text-infor1 td {
-  padding: 10px; 
-}
-
-.text-infor1 caption{
-  background-color: lightgray;
-  padding-top: 3px;
-}
-
-.infoConteudo{
-  width: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-left:4px solid #B20606;
-  border-right:4px solid hsl(0, 93%, 36%);
-  margin: 5%;
-justify-content: space-between;}
-
-.infoConteudo .tit{
-  border: 0;
-  display: flex;
-  max-width: 50%;
-  padding-bottom: 5%;
-  align-items: center;
-  flex-direction: column;
-  
-}
-.infoConteudo .text{
-  border: 0;
-  max-width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-.infoConteudo h1{color: #B20606;}
-
-.infoConteudo div{
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 2%;
-  padding-bottom: 2%;
-  border-bottom: 1px solid gray;
-}
-
-.infoConteudo div p{
-  font-size: large;
-  text-indent: 2em;
-  text-align:justify;
-}
-
-.infoConteudo div img{
-  max-width: 50%;
-  height: 280px;
-  margin-bottom: 15px;
-  border: 8px inset #B20606;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
-}
-
-
-.conteudoInfo4{
-  display: flex;
-  justify-content: center;
-
-}
-.conteudoInfo4 h1{
-  color: black;
-  font-size: 40px;
-}
-
-.conteudo2Info4{
-  display: flex;
-  width: 60%;
-  align-items: center;
-  flex-direction: column;
-}
-
-
-.sobrenos {
-  font-family: sans-serif;
-  display: flex;
-  width: 100%;
-  height: 500px;
-  justify-content: space-around;
-  margin: 20px 0;
-  align-items: center;
-}
-
-.criador {
-  text-align: center;
-  margin: 10px;
-}
-
-
-.criador img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; 
-  margin-bottom: 15px;
-  border: 4px solid #555;
-}
-
-.criador p {
-  font-size: 15px;
-  color: #555;
-}
-
-.logo{
-  width: 300px;
-  height: 300px;
-}
-
-/* Responsividade */
-@media only screen and (max-width: 768px) {
-  header {
-    padding: 0.5rem;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
   }
-
-  h1 {
-    font-size: 1.3rem;
+  
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
-
-  h2 {
-    font-size: 1rem;
+  
+  .gallery-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
   }
-
-  .div_burger {
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  
+  .times {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .times img {
+    flex-grow: 1;
+    height: 100px;
+    border: 0.5px solid;
+    border-radius: 5%;
+    margin-right: 5px; 
+  }
+  
+  .carousel {
+    width: 80%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  footer {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(122, 0, 0);
+    color: white;
+  }
+  
+  .infor{
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+  }
+  
+  .infor div{
+    width: 33%;
+    display: flex;
+    height: 200px;
+    flex-grow: 1;
+    margin: 20px;
+    border: 3px solid #B20606;
+    border-radius: 25px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    
+  }
+  
+  .infor a{
+    width: 101%;
+    height: 101%;
+    border-radius: 25px;
+  }
+  .infor a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  
+  .infor p{
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #button_burger{width: 30px; height: 30px; border: none;
+    display: flex;
+    justify-content: center;
+  }
+  #button_burger img{
+    width: 95%; height: 95%;
+  }
+  #div_burger{
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      background-color: white;
+    padding: 10px;}
+  #clica_botãoBurger {
+    cursor: pointer;
+    opacity: 0;
+    height: 32px;
+    width: 30px;
+    position: absolute;
+    right:0.6%;
+    top: 11%;
+  }
+  #clica_botãoBurger:checked ~  .barra_lateral{
     display: block;
   }
+  
+  .space_notice{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .notices{
+    margin: 30px;
+    width: 80%;
+    height: 150px;
+    background-color: #D9D9D9;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  .images_notice{
+    width: 45%;
+    height: 90%;
+    background-color: #131313;
+    border-radius: 20px;
+    margin: 0 30px;
+  }
+  .star_notice{
+    align-self: flex-end;
+    width: 5%;
+    height: 18%;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/73/73516.png");
+    
+  }
+  
+  .star_notice img{
+    width: 95%;
+    height: 90%;
+    opacity: 90%;
+  }
+  
+  
+  .barra_lateral{
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 200vh;
+    background-color: black;
+    position: absolute;
+    display: none;
+    
+  }
+  .barra_lateral button{
+    display: flex;
+    width: 70%;
+    height: 60px;
+    background-color: black;
+    margin: 10% 15%;
+    border: none;
+    border-bottom:1px solid white;
+    color: white;
+    justify-content: center;
+    
+  }
+  
+  .barra_lateral button img{
+    align-self: flex-start;
+    width: 30px;
+    height:30px;
+    top: 2%;
+    right: 85%;
+    background-color: black;
+    position: absolute;
+  }
+  
+  .div_burger{
+    align-self: flex-start;
+    width: 20px; 
+    height: 20px; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .div_burger img {
+    width: 100%; 
+    height: 100%; 
+  }
+  
+  .login_page{
+    color: black;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .sobre{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .sobre_info h6{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 50px;
+  }
+  
+  .sobrenos{
+    height: 500px;
+    background-color: black;
+  }
+  
+  .login{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30pt;
+    justify-content: center;
+  
+  }
+  
+  .login button{
+    width: 300px;
+    background-color: #B20606;
+    height: 55px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+  }
+  
+  .login button:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  .conteudo{
+    background-image: url(loginFundo.jpg);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginCaixa{
+    width: 40%;
+    height: 70%;
+    border: 4px groove gray;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .loginCaixa input{
+    margin: 20px 0;
+    width: 90%;
+    height: 40px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+  }
+  
+  .loginCaixa button{
+    width: 90%;
+    height: 50px;
+    background-color: rgb(122, 0, 0);
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 5px 0;
+  }
+  .loginCaixa button:hover{
+    background-color: black;
+    border: 2px solid white;
+  }
+  
+  button[disabled]{
+    opacity: 0.7;
+  }
+  
+  .conteudo h2{
+    font-size: xx-large;
+    margin: 10px;
+  }
+  
+  .infor1 h1{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 200%;
+    margin-top: 5px;
+  }
+  
+  
+  .text-infor1 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .text-infor1 table {
+    border: 1px solid lightgray; 
+    margin: 20px; 
+  }
+  .text-infor1 th{
+    background-color: rgb(122, 0, 0);
+    color: #ffffff;
+  }
+  
+  .text-infor1 th, .text-infor1 td {
+    padding: 10px; 
+  }
+  
+  .text-infor1 caption{
+    background-color: lightgray;
+    padding-top: 3px;
+  }
+  
+  .infoConteudo{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-left:4px solid #B20606;
+    border-right:4px solid hsl(0, 93%, 36%);
+    margin: 5%;
+  justify-content: space-between;}
+  
+  .infoConteudo .tit{
+    border: 0;
+    display: flex;
+    max-width: 50%;
+    padding-bottom: 5%;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .infoConteudo .text{
+    border: 0;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  .infoConteudo h1{
+    color: #B20606;}
+  
+  .infoConteudo div{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid gray;
+  }
+  
+  .infoConteudo div p{
+    font-size: large;
+    text-indent: 2em;
+    text-align:justify;
+  }
+  
+  .infoConteudo div img{
+    max-width: 50%;
+    height: 280px;
+    margin-bottom: 15px;
+    border: 8px inset #B20606;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+  }
+  
+  
+  .conteudoInfo4{
+    display: flex;
+    justify-content: center;
+  
+  }
+  .conteudoInfo4 h1{
+    color: black;
+    font-size: 40px;
+  }
+  
+  .conteudo2Info4{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  .sobrenos {
+    font-family: sans-serif;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: space-around;
+    margin: 20px 0;
+    align-items: center;
+  }
+  
+  .criador {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  
+  .criador img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    margin-bottom: 15px;
+    border: 4px solid #555;
+  }
+  
+  .criador p {
+    font-size: 15px;
+    color: #555;
+  }
+  
+  .logo{
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Tablet */
+  @media only screen and (max-width: 768px) {
+    header {
+      padding: 0.5rem;
+      font-size: 16px;
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+    }
+  
+    h2 {
+      font-size: 1rem;
+    }
+  
+    .div_burger {
+      display: block;
+    }
+  
+    .gallery,
+    .carousel,
+    .infor {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: none;
+    }
+  
+    .gallery img,
+    .carousel img,
+    .infor div {
+      flex: 0 0 100%;
+      scroll-snap-align: none;
+    }
+  
+    .buttonFecharMenu {
+      display: block;
+    }
+  
+    ol {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 20px;
+    }
+    
+    .loginCaixa{
+        max-width: 100%;
+        height: auto;
+    }
 
-  .gallery,
-  .carousel,
-  .infor {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: none;
+    .login_page {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+    .sobre_info h6 {
+        font-size: 18px;
+      }
+    
+    .login {
+        width: 100%;
+        text-align: center;
+      }
   }
 
-  .gallery img,
-  .carousel img,
-  .infor div {
-    flex: 0 0 100%;
-    scroll-snap-align: none;
-  }
 
-  .buttonFecharMenu {
-    display: block;
-  }
+/* Celulares */
+@media only screen and (max-width: 480px) {
+    header {
+      height: auto;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .div_burger {
+      display: block;
+    }
+  
+    .gallery,
+    .carousel{
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: none;
+    }
 
-  ol {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 20px;
-  }
+    .gallery img,
+    .carousel 
+    .images_notice{
+      flex: 0 0 100%;
+      scroll-snap-align: none;
+    }
+  
+    .buttonFecharMenu {
+      display: block;
+    }
+  
+    .loginCaixa {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .loginCaixa input,
+    .loginCaixa button {
+      width: 100%;
+    }
 
-}
+    .login_page {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+
+    .sobrenos{
+        flex-direction: column;
+    }
+    .sobre_info h6 {
+        font-size: 16px;
+      }
+    
+    .login {
+        width: 100%;
+        text-align: center;
+      }
+    
+
+    h1 .infor1{
+        font-size: 50%;
+    }
+  }
