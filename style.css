@@ -485,7 +485,12 @@
     flex-direction: column;
   }
   .infoConteudo h1{
-    color: #B20606;}
+    color: #B20606;
+    text-align: center;}
+
+  .infoConteudo h3{
+    text-align: justify;
+  }
   
   .infoConteudo div{
     width: 90%;
@@ -564,6 +569,60 @@
     height: 300px;
   }
   
+
+  .infoConteudo4{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-left:4px solid #B20606;
+    border-right:4px solid hsl(0, 93%, 36%);
+    margin: 5%;
+   justify-content: space-between;}
+  
+  .infoConteudo4 .text{
+    border: 0;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  .infoConteudo4 h1{
+    color: #B20606;
+    font-size: 40px;
+    width: 80%;
+    text-align: center;
+ } 
+  
+  .infoConteudo4 div{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+  }
+  
+  .infoConteudo4 p{
+    font-size: large;
+    text-indent: 2em;
+    text-align:justify;
+    width: 75%;
+    margin-bottom: 30px;
+  }
+  
+  .infoConteudo4 img{
+    max-width: 50%;
+    height: 280px;
+    margin-bottom: 45px;
+    border: 8px inset #B20606;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+  }
+
+   .lista{
+    font-size: 24px;
+    color: #B20606;
+    margin: 15px;
+  }
+  
   /* Tablet */
   @media only screen and (max-width: 768px) {
     header {
@@ -572,7 +631,7 @@
     }
   
     h1 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   
     h2 {
@@ -627,6 +686,38 @@
         width: 100%;
         text-align: center;
       }
+
+    .infor1 h1{
+        font-size: 150%;
+        text-align: center;
+    }
+
+    .infoConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+    .infoConteudo .tit h1 {
+        font-size: 16px;
+        text-align: center;
+      }
+    
+    .infoConteudo > div {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+    
+    .infoConteudo img {
+        width: 100%;
+      }
+    
+    .infoConteudo .text {
+        padding: 10px;
+        text-align: justify;
+      }
+    
   }
 
 
@@ -643,6 +734,11 @@
     h2 {
       font-size: 1.2rem;
     }
+
+    .img_burger {
+        width: 100px; 
+        height: auto; 
+      }
   
     .div_burger {
       display: block;
@@ -657,7 +753,7 @@
     }
 
     .gallery img,
-    .carousel 
+    .carousel, 
     .images_notice{
       flex: 0 0 100%;
       scroll-snap-align: none;
@@ -696,7 +792,25 @@
       }
     
 
-    h1 .infor1{
-        font-size: 50%;
+    .infor1 h1{
+        font-size: 150%;
+        text-align: center;
     }
+
+    
+    .infoConteudo {
+        display: flex;
+        align-items: center;
+      }
+    
+    
+    .infoConteudo  div {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    
+    .infoConteudo img {
+        width: 100%;
+      }
+    
   }
