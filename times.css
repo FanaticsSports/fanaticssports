@@ -8,8 +8,8 @@
     font-family: sans-serif;
   }
   
-  header {
-  display: flex;
+  header,footer{
+   display: flex;
    background-color: #026138;
    width: 100%;
    height: 65px;
@@ -19,10 +19,18 @@
    color: white;
    font-size: 30pt;
    border: double 0.5px #0a2e1e;
-   flex-grow: 1;
+   flex-grow: 1;}
 
-   
-  }
+   footer{
+    display: flex;
+    width: 100%;
+    height: 65px;
+    padding: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 30pt;
+    }
+
   header img{
     width:60px;
     height: 70px;
@@ -95,3 +103,137 @@ p{
   max-height: 170px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
 }
+
+/* TABLETS */
+@media only screen and (max-width: 1024px) {
+    header, footer {
+      height: 50px;
+      font-size: 20pt;
+      padding: 10px;
+    }
+  
+    header img {
+      width: 40px;
+      height: 50px;
+      margin-top: 50px;
+    }
+  
+    .fotosTimes img {
+      width: 50%;
+      height: auto;
+      margin-bottom: 25px;
+    }
+  
+    h4, h2, .conteudo p, h5, .conteudo img {
+      max-width: 95%;
+      margin-left: 2%;
+    }
+    
+    h4{
+        margin-top: 20px;
+    }
+
+    .jogadoresTimes {
+      width: 90%;
+      margin: 0 0 10px 10px;
+
+    }
+  
+    .jogadoresTimes p {
+      max-width: 60%;
+    }
+  
+
+    footer{
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    .conteudo{
+        font-size: 18px;
+        margin: 0 20 0 20;
+        text-align: justify;
+        align-items: center;
+    }
+
+    .fotosTimes img.hide-on-mobile {
+        display: none;
+      }
+
+    .jogadoresTimes img {
+        max-width: 50%;
+        max-height: auto;
+        margin: 10px;
+      }
+
+    .fotosTimes{
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
+  /* CELULARES */
+  @media only screen and (max-width: 480px) {
+    header{
+      height: 40px;
+      font-size: 16pt;
+    }
+   
+    footer{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header img {
+      width: 30px;
+      height: 40px;
+      margin-top: 30px;
+    }
+  
+    .fotosTimes {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .fotosTimes img {
+      width: 70%;
+      margin: 5px;
+      height: auto;
+    }
+  
+    h2, .conteudo p, h5, .conteudo img {
+      max-width: 80%;
+    }
+
+    .conteudo{
+        font-size: 15px;
+        margin: 0 20 0 20;
+        text-align: justify;
+        align-items: center;
+    }
+
+    h4{
+        text-align: center;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+  
+    .jogadoresTimes {
+      flex-direction: column;
+      width: 80%;
+      height: auto;
+    
+    }
+  
+    .jogadoresTimes p {
+      max-width: 100%;
+      margin: 10px;
+      padding: 5px;
+    }
+  
+    .jogadoresTimes img {
+      max-width: 50%;
+      max-height: auto;
+      margin: 10px;
+    }
+  }
