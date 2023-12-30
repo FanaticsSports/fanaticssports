@@ -14,17 +14,26 @@
     <div class="div_burger">
       <img class="img_burger" src="cardapio.png" alt="abrir-menu">
     </div>
-
   </header>
   
   <div class="conteudo">
     <h2>Fanatics'Sports</h2>
     <div class="loginCaixa">
-        <p>E-MAIL</p>
-        <input type="email">
-        <p>SENHA</p>
-        <input type="password">
-        <button>LOGIN</button>
+        <label for="emailInput">E-MAIL</label>
+        <div>
+          <input type="email" id="emailInput" class="error-input"> 
+          <span id="emailError" class="error"></span>
+        </div>
+
+        <label for="senhaInput">SENHA</label>
+        <div>
+          <input type="password" id="senhaInput" class="error-input">
+          <span id="senhaError" class="error"></span>
+        </div>
+
+        <div>
+          <button id="loginButton" onclick="validarFormulario()">LOGIN</button>
+        </div>
     </div>
   </div>
   <footer>
@@ -37,7 +46,7 @@
     <a href="inicial.html"><button>Página Inicial</button></a>
     <a href="dashboard.html"><button>Dashboard</button></a>
     <a href="login.html"><button>Entrar com uma conta</button></a>
-    <a href="cadastro.html"><button>Cadastrar conta</button>  </a>
+    <a href="cadastro.html"><button>Cadastrar conta</button></a>
     <a href=""><button>Times</button></a> 
   </div>
   <script src="script.js"></script>
