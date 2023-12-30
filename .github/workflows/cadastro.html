@@ -20,12 +20,15 @@
     <h2>Fanatics'Sports</h2>
     <div class="loginCaixa">
         <p>E-MAIL</p>
-        <input type="email">
+        <input type="email" id="emailInput">
+        <span id="emailError" class="error"></span>
         <p>SENHA</p>
-        <input type="password">
+        <input type="password" id="senhaInput">
+        <span id="senhaError" class="error"></span>
         <p>TIME DE PREFERÊNCIA</p>
-        <input type="text">
-        <button>CADASTRAR-SE</button>
+        <input type="text" id="timeInput">
+        <span id="timeError" class="error"></span>
+        <button id="cadastrarButton" onclick="validarCadastroENavegar()" >CADASTRAR-SE</button>
     </div>
   </div>
   <footer>
