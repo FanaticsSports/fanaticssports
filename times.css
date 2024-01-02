@@ -201,9 +201,14 @@ p{
       height: auto;
     }
   
-    h2, .conteudo p, h5, .conteudo img {
+    h2, .conteudo p, h5{
       max-width: 80%;
     }
+
+    .conteudo img{
+        display: none;
+    }
+
 
     .conteudo{
         font-size: 15px;
